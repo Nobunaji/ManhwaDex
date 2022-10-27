@@ -1,0 +1,24 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "README.md": true,
+        ".eslintrc.json": true,
+        ".gitignore": true,
+        "next.config.js": true,
+        "package-lock.json": true,
+        "package.json": true
+    },
+    "hide-files.files": [
+        "README.md",
+        ".eslintrc.json",
+        ".gitignore",
+        "next.config.js",
+        "package-lock.json",
+        "package.json"
+    ]
+}

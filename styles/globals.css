@@ -1,0 +1,92 @@
+:root {
+    --font: 16px;
+    --font-color: var(--white);
+    --background-primary: var(--xiketic);
+    --background-secondary: var(--raisin-black);
+    --buttons: var(--dark-purple);
+    --color-scheme: dark;
+    --accent: var(--orange-soda);
+
+    /* Colors */
+    --black: hsl(0, 0%, 0%);
+    --eerie-black: hsl(0, 0%, 10%);
+    --jet: hsl(0, 0%, 20%);
+    --davy-gray: hsl(0, 0%, 30%);
+    --dim-gray: hsl(0, 0%, 40%);
+    --gray: hsl(0, 0%, 50%);
+    --spanish-gray: hsl(0, 0%, 60%);
+    --silver: hsl(0, 0%, 70%);
+    --lightgray: hsl(0, 0%, 80%);
+    --gainsboro: hsl(0, 0%, 90%);
+    --white: hsl(0, 0%, 100%);
+
+    --xiketic: hsl(262, 20%, 10%);
+    --raisin-black: hsl(260, 20%, 15%);
+    --dark-purple: #30293d;
+
+    /* Accents */
+    --red: hsl(0, 70%, 50%);
+    --orange-soda: hsl(10, 100%, 60%);
+    --amber-yellow: hsl(45, 100%, 50%);
+    --yellow: hsl(60, 100%, 50%);
+    --lincoln-green: hsl(120, 100%, 20%);
+    --green: hsl(120, 100%, 30%);
+    --cyan: hsl(190, 60%, 65%);
+    --pacific-blue: hsl(190, 60%, 45%);
+    --blue: hsl(240, 70%, 50%);
+    --lightblue: hsl(240, 70%, 60%);
+    --tyrian-purple: hsl(330, 100%, 25%);
+    --purple: hsl(300, 100%, 25%);
+    --red-purple: hsl(330, 100%, 40%);
+    --pink: hsl(330, 100%, 60%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--font-color);
+    text-decoration: none;
+    background-color: transparent;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Spartan', sans-serif;
+    font-size: var(--font);
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-primary);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 60px);
+    position: relative;
+    top: 60px;
+}
+
+button {
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
+svg {
+    width: 25px;
+    height: 25px;
+    margin: 12.5px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--background-secondary) inset;
+    box-shadow: 0 0 0px 1000px var(--background-secondary) inset;
+    -webkit-text-fill-color: var(--font-color);
+}
