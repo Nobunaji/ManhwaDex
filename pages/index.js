@@ -1,10 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
 import Header from "./layout/header";
-import Article from "./layout/article";
+import List from "./layout/list";
+import Filter from "/pages/layout/filter";
+
 import style from "/styles/home.module.css";
 
-export default function Home( {posts}) {
+export default function Home({type}) {
     return (
     <>
         <Head>
@@ -17,33 +18,16 @@ export default function Home( {posts}) {
         </Head>
         <Header/>
         <main>
-            <div className={style.container}>
-                <Article title="Crimson Karma"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Mook Hyang - Dark Lady"/>
-                <Article title="Asmodian's Contract"/>
-                <Article title="The Return of the 8th Class Mage"/>
-                <Article title="The Golden-Haired Elementalist"/>
-                <Article title="White Blood"/>
-                <Article title="A Transmigrator's Privilege"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-                <Article title="Lady Chef Royale"/>
-            </div>
+            <Filter className={style.filter} type={type}/>
+            <List type={type}/>
         </main>
     </>
   )
+}
+
+export async function getServerSideProps() {
+    const type = "Manhwa";
+    return {
+        props: { type }
+    }
 }

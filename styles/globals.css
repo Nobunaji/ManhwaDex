@@ -3,6 +3,7 @@
     --font-color: var(--white);
     --background-primary: var(--xiketic);
     --background-secondary: var(--raisin-black);
+    --background-ternary: var(--dark-purple);
     --buttons: var(--dark-purple);
     --color-scheme: dark;
     --accent: var(--orange-soda);
@@ -62,14 +63,11 @@ body {
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
     height: calc(100vh - 60px);
     position: relative;
     top: 60px;
-    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
 }
 
 button {
